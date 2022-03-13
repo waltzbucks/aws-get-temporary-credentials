@@ -115,6 +115,6 @@ response >
 {
     "UserId": "AROAUDQ6F5DODABM76FAE:botocore-session-1646724170",
     "Account": "123456789012",
-    "Arn": "arn:aws:sts::123456789012:assumed-role/mzc_solutions_architect/botocore-session-1646724170"
+    "Arn": "arn:aws:sts::123456789012:assumed-role/myassume/botocore-session-1646724170"
 }
 ```
