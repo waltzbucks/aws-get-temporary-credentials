@@ -47,6 +47,12 @@ def main():
                              "900 (15 minutes). Maximum: 129600 (36 hours). "
                              "Defaults to 43200 (12 hours), or 3600 (one "
                              "hour).")
+    parser.add_argument('--force',
+                        required=False,
+                        action='store_true',
+                        help="If need to always new temporary credentials token, "
+                        "when use this option forcly stored credentials overwrite")
+    parser.set_defaults(force=False)
     parser.add_argument('--otpkey',
                         required=True,
                         help="Your the secret key of virtual MFA device.")
@@ -75,7 +81,7 @@ def main():
             args.duration = 28800 # Time setup to temporary credential for keep using on 8 hour 
       
     # temporary credential control through temp file
-    if os.path.exists(path) is False or time.time() > get_exptime(path=path) + args.duration :
+    if os.path.exists(path) is False or time.time() > get_exptime(path=path) + args.duration or args.force :
         temp_credential = get_credentials(
             profile = args.profile,
             mfa_device = args.device,
