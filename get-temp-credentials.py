@@ -1,6 +1,21 @@
 # -*- coding: utf-8 -*-
-import pyotp, time, boto3, json, os, datetime
+import time, boto3, json, os, datetime
+import sys, subprocess
 import argparse, tempfile
+
+
+# install additional module
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# arrow module for calcurator start and end of month
+try:
+    import pyotp
+except:
+    install("pyotp")
+finally:    
+    import pyotp
+
 
 def get_sts_session(**kwargs):
     session = boto3.session.Session(profile_name=kwargs['profile_name'])
