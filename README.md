@@ -16,7 +16,7 @@ Guide link: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 - Check the installed version. 
 
     ```bash
-    python --version`
+    python3 --version`
     ```
     
 <br>
@@ -26,7 +26,7 @@ Guide link: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 `pyotp` and `boto3` are required for this script. Install with pip as follows. 
 
 ```bash
-python -m pip install boto3 pyotp
+python3 -m pip install boto3 pyotp
 ```
 
 - If pip is not installed, please check the [link] (https://pip.pypa.io/en/stable/installation/). 
@@ -47,7 +47,7 @@ python -m pip install boto3 pyotp
 - Check if the temporary authentication key can be received by executing the `MFA secret key` and `device ARN` copied in the above process by attaching the values to each option as shown below. 
     
     ```bash
-    python $home/.aws/ctc-temp-credential.py \
+    python3 $home/.aws/get-temp-credentials.py \
      --device (MFA_DEVICE_ARN) \
      --otpkey (MFA_SECRET_KEY) \
      --profile (YOUR_AWS_CLI_PROFILE)
@@ -57,9 +57,9 @@ python -m pip install boto3 pyotp
     
     ```json
     {
-        "AccessKeyId": "ASIAULDOYXF5ZASBROSK",
-        "SecretAccessKey": "6ZtOLb0gT3HBCieeldJO1w58RCpFQsm7NtNjpKpR",
-        "SessionToken": "IQoJb3JpZ2luX2VjEE8aDmFwLW5vcnRoZWFzdC0yIkcwRQIgLTavhqFdZLccaF4i14N2Mee3lb8O+n/mkCCpWjBPa0MCIQDLGQp+qcJa3fpRtbF8krvjWbwhvcPw06Jne++MhTR5Lir4AQi4//////////8BEAAaDDI5ODczMjUzNDEzOSIM2Xdumy5y0MmxylU4KswBIgfiVhEMRUvugSQkVmMOn30I4u9GicO6/nWp/fmNcdl3DNDXQt2z8bUkkmLSQrhGA7u50QJBGowOnYnZL6QVaxj9aiG2bmnL6uFSM03x/FUidkDnd0sPqdVHGau+388wC0YI1MyMPU+emarZgFTUtUk0vv7OR7ENp04OXAIysmRUzKdXgnOeEa4tMZOvDaWkYd7/U172TmpfkvyHleUcy145AcUyf2aMZRZWEmjRdw/V9e4Q+j2Lj5hcovRtl1BhdPezZcUeUDGDH61bMM//m5EGOpgBCKdE9A7A3bQGZiL5FCr1fDi+SZKEBvTqJhAIc6zWQ8bgOyhpjUOvQ4whnf8wSioD9yP/udYpoaV7T14US9MeFZJd+kNFT80e74tnFA4RYBMafprCx9+qQObZ0nmo7++r0gLS8K+G9jaXJpTymk8mnMZVuNQneS8QkiWiJb42AdkAde+kfNtCzhWETKIWdOUrh9k7Yzf4bU4=",
+        "AccessKeyId": "AAAAAAAAAAAAAAAAAAAA",
+        "SecretAccessKey": "----MASKING----",
+        "SessionToken": "----MASKING----",
         "Expiration": "2022-03-05T15:03:43+00:00",
         "Version": 1
     }
@@ -78,7 +78,7 @@ python -m pip install boto3 pyotp
 [profile temp-cred]
 region = ap-northeast-2
 output = json
-credential_process = python /home/username/.aws/get-temp-credential.py --device (MFA_DEVICE_ARN) --otpkey (MFA_SECRET_KEY) --profile (YOUR_AWS_CLI_PROFILE)
+credential_process = python3 /home/username/.aws/get-temp-credential.py --device (MFA_DEVICE_ARN) --otpkey (MFA_SECRET_KEY) --profile (YOUR_AWS_CLI_PROFILE)
 ```
     
 <br>
@@ -113,7 +113,7 @@ response >
 
 ```json
 {
-    "UserId": "AROAUDQ6F5DODABM76FAE:botocore-session-1646724170",
+    "UserId": "ABCDEFGHIJKLMNOPQRST:botocore-session-1646724170",
     "Account": "123456789012",
     "Arn": "arn:aws:sts::123456789012:assumed-role/myassume/botocore-session-1646724170"
 }
