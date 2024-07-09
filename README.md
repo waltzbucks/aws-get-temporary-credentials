@@ -57,9 +57,9 @@ python3 -m pip install boto3 pyotp
     
     ```json
     {
-        "AccessKeyId": "ASIAULDOYXF5ZASBROSK",
-        "SecretAccessKey": "6ZtOLb0gT3HBCieeldJO1w58RCpFQsm7NtNjpKpR",
-        "SessionToken": "IQoJb3JpZ2luX2VjEE8aDmFwLW5vcnRoZWFzdC0yIkcwRQIgLTavhqFdZLccaF4i14N2Mee3lb8O+n/mkCCpWjBPa0MCIQDLGQp+qcJa3fpRtbF8krvjWbwhvcPw06Jne++MhTR5Lir4AQi4//////////8BEAAaDDI5ODczMjUzNDEzOSIM2Xdumy5y0MmxylU4KswBIgfiVhEMRUvugSQkVmMOn30I4u9GicO6/nWp/fmNcdl3DNDXQt2z8bUkkmLSQrhGA7u50QJBGowOnYnZL6QVaxj9aiG2bmnL6uFSM03x/FUidkDnd0sPqdVHGau+388wC0YI1MyMPU+emarZgFTUtUk0vv7OR7ENp04OXAIysmRUzKdXgnOeEa4tMZOvDaWkYd7/U172TmpfkvyHleUcy145AcUyf2aMZRZWEmjRdw/V9e4Q+j2Lj5hcovRtl1BhdPezZcUeUDGDH61bMM//m5EGOpgBCKdE9A7A3bQGZiL5FCr1fDi+SZKEBvTqJhAIc6zWQ8bgOyhpjUOvQ4whnf8wSioD9yP/udYpoaV7T14US9MeFZJd+kNFT80e74tnFA4RYBMafprCx9+qQObZ0nmo7++r0gLS8K+G9jaXJpTymk8mnMZVuNQneS8QkiWiJb42AdkAde+kfNtCzhWETKIWdOUrh9k7Yzf4bU4=",
+        "AccessKeyId": "ABCDEFGHIJKLMNOPQRST",
+        "SecretAccessKey": "----MASKING----",
+        "SessionToken": "----MASKING----",
         "Expiration": "2022-03-05T15:03:43+00:00",
         "Version": 1
     }
@@ -113,7 +113,7 @@ response >
 
 ```json
 {
-    "UserId": "AROAUDQ6F5DODABM76FAE:botocore-session-1646724170",
+    "UserId": "ABCDEFGHIJKLMNOPQRST:botocore-session-1646724170",
     "Account": "123456789012",
     "Arn": "arn:aws:sts::123456789012:assumed-role/myassume/botocore-session-1646724170"
 }
