@@ -57,7 +57,7 @@ python3 -m pip install boto3 pyotp
     
     ```json
     {
-        "AccessKeyId": "AAAAAAAAAAAAAAAAAAAA",
+        "AccessKeyId": "",
         "SecretAccessKey": "",
         "SessionToken": "",
         "Expiration": "2022-03-05T15:03:43+00:00",
