@@ -16,7 +16,7 @@ Guide link: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 - Check the installed version. 
 
     ```bash
-    python --version`
+    python3 --version`
     ```
     
 <br>
@@ -26,7 +26,7 @@ Guide link: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 `pyotp` and `boto3` are required for this script. Install with pip as follows. 
 
 ```bash
-python -m pip install boto3 pyotp
+python3 -m pip install boto3 pyotp
 ```
 
 - If pip is not installed, please check the [link] (https://pip.pypa.io/en/stable/installation/). 
@@ -47,7 +47,7 @@ python -m pip install boto3 pyotp
 - Check if the temporary authentication key can be received by executing the `MFA secret key` and `device ARN` copied in the above process by attaching the values to each option as shown below. 
     
     ```bash
-    python $home/.aws/ctc-temp-credential.py \
+    python3 $home/.aws/get-temp-credentials.py \
      --device (MFA_DEVICE_ARN) \
      --otpkey (MFA_SECRET_KEY) \
      --profile (YOUR_AWS_CLI_PROFILE)
@@ -78,7 +78,7 @@ python -m pip install boto3 pyotp
 [profile temp-cred]
 region = ap-northeast-2
 output = json
-credential_process = python /home/username/.aws/get-temp-credential.py --device (MFA_DEVICE_ARN) --otpkey (MFA_SECRET_KEY) --profile (YOUR_AWS_CLI_PROFILE)
+credential_process = python3 /home/username/.aws/get-temp-credential.py --device (MFA_DEVICE_ARN) --otpkey (MFA_SECRET_KEY) --profile (YOUR_AWS_CLI_PROFILE)
 ```
     
 <br>
